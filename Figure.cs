@@ -12,23 +12,14 @@ namespace FigureSquare
         }
         public double CalculateSquare(double a, double b, double c)
         {
-            if (a > 0 && b > 0 && c > 0)
+            if (a > 0 && b > 0 && c > 0)//еще можно сделать проверку на то, что сумма любых двух сторон всегда больше третьей
             {
                 
                     //если треугольник прямоугольный (проверяем по т. Пифагора), то его площадь равна половине произведения катетов
-                    if (a > b)
-                    {
-                        if (a > c)
-                        {
-
-                            if (a * a == b * b + c * c)
-                                return b * c / 2;
-                        }
-                        else
-                        {
-                            if (c * c == b * b + a * a)
-                                return a * b / 2;
-                        }
+                    if ((a > b)&&(a>c))
+                    {                                        
+                          if (a * a == b * b + c * c)
+                                return b * c / 2;                        
                     }
                     else
                     {
