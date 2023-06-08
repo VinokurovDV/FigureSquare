@@ -6,6 +6,5 @@
 Задача2:
 Имеем 2 таблицы: Products и ProductCategories, связанные между собой полем Id.
 Запрос на отображение всех продуктов, даже не имеющих категории выглядит так:
-Select ProductName  from Products,
-CategoriesName from ProductCategories
-left join ProductCategories as pc where Products.id=pc.id
+Select * from Products,
+left join ProductCategories as pc ON Products.id=pc.id
