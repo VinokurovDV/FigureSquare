@@ -12,6 +12,10 @@ namespace FigureSquare
         }
         public double CalculateSquare(double a, double b, double c)
         {
+            if ((a<b+c) || (b<a+c) || (c<a+b))
+                {
+                throw new ArgumentException("Некорректные входные данные. Длина одной стороны треугольника всегда должна быть меньше суммы двух других сторон");
+            }
             if (a > 0 && b > 0 && c > 0)//еще можно сделать проверку на то, что сумма любых двух сторон всегда больше третьей
             {
                 
